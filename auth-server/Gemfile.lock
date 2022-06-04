@@ -77,6 +77,8 @@ GEM
       reline (>= 0.2.7)
     digest (3.1.0)
     erubi (1.10.0)
+    fast_jsonapi (1.5)
+      activesupport (>= 4.2)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.10.0)
@@ -115,6 +117,8 @@ GEM
       nio4r (~> 2.0)
     racc (1.6.0)
     rack (2.2.3.1)
+    rack-cors (1.1.1)
+      rack (>= 2.0.0)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (7.0.3)
@@ -164,7 +168,9 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootsnap
   debug
+  fast_jsonapi
   puma (~> 5.0)
+  rack-cors
   rails (~> 7.0.3)
   sqlite3 (~> 1.4)
   tzinfo-data
