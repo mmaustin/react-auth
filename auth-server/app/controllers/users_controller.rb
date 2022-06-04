@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 
     def show
         #band = Band.find(params[:id])
-        render json: @user.to_json(only: [:id, :username, :email)
+        render json: @user.to_json(only: [:id, :username, :email])
     end
 
     def create
