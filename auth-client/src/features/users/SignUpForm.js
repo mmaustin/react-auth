@@ -18,13 +18,12 @@ const SignupForm = () => {
     e.preventDefault();
 
     const userCreds = { ...formData };
-
-    fetch("/users", {
+    fetch("http://localhost:3000/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(userCreds),
+      body: JSON.stringify({user: userCreds}),
     }).then((res) => {
       if (res.ok) {
         res.json().then((user) => {
@@ -59,7 +58,7 @@ const SignupForm = () => {
       <label htmlFor="password">Password:</label>
       <input
         id="password-signup-input"
-        type="password"
+        type="text"
         name="password"
         value={formData.password}
         onChange={handleChange}
