@@ -1,10 +1,14 @@
 import React from 'react';
+import SignupForm from './features/users/SignUpForm';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
 const App =() => {
   return (
-    <>
-      <p>I hope this session's hash exercise works!</p>
-    </>
+    <Router>
+      <Routes>
+        <Route exact path="/" element={< SignupForm />} />
+      </Routes>
+    </Router>
   );
 }
 
