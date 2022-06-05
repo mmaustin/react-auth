@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    before_action :set_user, only: [:show, :update, :destroy]
+    before_action :set_user, only: [:update, :destroy]
 
     def index
         users = User.all
@@ -8,8 +8,13 @@ class UsersController < ApplicationController
     end
 
     def show
+        if current_user
+            render json: current_user, status: :ok
+        else
+            render json: "No current session stored", status: :unauthorized
+        end
         #band = Band.find(params[:id])
-        render json: @user.to_json(only: [:id, :username, :email])
+        #render json: @user.to_json(only: [:id, :username, :email])
     end
 
     def create

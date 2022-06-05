@@ -8,7 +8,7 @@ const App =() => {
   const [currentUser, setCurrentUser] = useState(null);
 
   useEffect(() => {
-    fetch("/me").then((res) => {
+    fetch("http://localhost:3000/me").then((res) => {
       if (res.ok) {
         res.json().then((user) => {
           setCurrentUser(user);
@@ -30,7 +30,7 @@ const App =() => {
       <Routes>
         <Route exact path="/" element={< SignupForm />} />
       </Routes>
-  </Router>*/}
+    </Router>*/}
   </>  
   );
 }
