@@ -7,10 +7,7 @@ export const FetchUser = () => {
   
     useEffect(() => {
       fetch("http://localhost:3000/me",
-      {headers: {
-        "Content-type": "application/json",
-        "Access-Control-Allow-Origin": true
-      }}
+      {withCredentials: true}
       ).then((res) => {
         if (res.ok) {
           res.json().then((user) => {
