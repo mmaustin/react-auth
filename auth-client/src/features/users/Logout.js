@@ -3,7 +3,7 @@ import React from 'react';
 export const Logout = () => {
 
     const handleLogout = () => {
-        fetch('/logout', {method: "DELETE"})
+        fetch('http://localhost:3000/logout', {method: "DELETE"})
         .then(res => {
               console.log(res);
             })
