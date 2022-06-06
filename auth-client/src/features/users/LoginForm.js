@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const LoginForm = () => {
+export const LoginForm = () => {
   const [formData, setFormData] = useState({
     username: "",
     password: "",
@@ -14,7 +14,7 @@ const LoginForm = () => {
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetch("/login", {
+    fetch("http://localhost:3000/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -23,6 +23,7 @@ const LoginForm = () => {
     }).then((res) => {
       if (res.ok) {
         res.json().then((user) => {
+            console.log(user);
         });
       } else {
         res.json().then((errors) => {
@@ -54,5 +55,3 @@ const LoginForm = () => {
     </form>
   );
 };
-
-export default LoginForm;
