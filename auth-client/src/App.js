@@ -5,7 +5,7 @@ import { LoginForm } from './features/users/LoginForm';
 import { Logout } from './features/users/Logout';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'*/
 
-const App =() => {
+export const App =() => {
 
   return (
     <>
@@ -34,4 +34,4 @@ const PrintInOrder = () => {
   )
 }
 
-export default App;
+//export default App;
