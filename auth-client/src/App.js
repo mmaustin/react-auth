@@ -9,7 +9,7 @@ export const App =() => {
 
   return (
     <>
-      <UpcaseAnimals/>
+      <PrintInOrder/>
     {/*<Router>
       <Routes>
         <Route exact path="/" element={< SignupForm />} />
@@ -24,18 +24,20 @@ export const App =() => {
 
 const PrintInOrder = () => {
   const animals = ['dog', 'cat', 'gorilla', 'elephant'];
-  const animalList = animals.map((animal, i) => {
-    return <p key={i}>{animal}</p>;
-  });
-  return(
-    <>
-      {animalList}
-    </>
-  )
+return(  
+  <div>
+    {animals.map((animal, i) => (
+      <UpcaseAnimals key={i} k={i} animal={animal}/>
+    ))}
+  </div>
+)
 }
 
-const UpcaseAnimals = () => {
-  PrintInOrder.map(a => console.log(a));
+const UpcaseAnimals = (props) => {
+  console.log(props)
+  return(
+    <p key={props.k}>{props.animal.toUpperCase()}</p>
+  )
 }
 
 //export default App;
