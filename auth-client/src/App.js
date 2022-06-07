@@ -32,11 +32,11 @@ return(
   </div>
 )
 }
-
-const UpcaseAnimals = (props) => {
-  console.log(props)
+//                    (props)
+const UpcaseAnimals = ({animal, k}) => {
   return(
-    <p key={props.k}>{props.animal.toUpperCase()}</p>
+    //key={props.k}(but this key isn't needed)   {props.animal.toUpperCase()}
+    <p >{animal.toUpperCase()}</p>
   )
 }
 
