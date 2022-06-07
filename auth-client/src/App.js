@@ -9,7 +9,7 @@ export const App =() => {
 
   return (
     <>
-      <PrintInOrder/>
+      <UpcaseAnimals/>
     {/*<Router>
       <Routes>
         <Route exact path="/" element={< SignupForm />} />
@@ -17,7 +17,7 @@ export const App =() => {
         <Route exact path="/login" element={< LoginForm />} />
         <Route exact path="/logout" element={< Logout />} />
       </Routes>
-  </Router>*/}
+    </Router>*/}
     </>
   );
 }
@@ -32,6 +32,10 @@ const PrintInOrder = () => {
       {animalList}
     </>
   )
+}
+
+const UpcaseAnimals = () => {
+  PrintInOrder.map(a => console.log(a));
 }
 
 //export default App;
