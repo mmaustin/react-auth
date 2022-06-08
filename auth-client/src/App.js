@@ -9,7 +9,7 @@ export const App =() => {
 
   return (
     <>
-      <PrintInOrder/>
+      < SortAnimals/>
     {/*<Router>
       <Routes>
         <Route exact path="/" element={< SignupForm />} />
@@ -22,6 +22,17 @@ export const App =() => {
   );
 }
 
+const SortAnimals = () => {
+  const animals = ['dog ', 'cat ', 'gorilla ', 'elephant'];
+
+  return(
+    <>
+      {animals}
+    </>
+  )
+}
+
+/*
 const PrintInOrder = () => {
   const animals = ['dog', 'cat', 'gorilla', 'elephant'];
 return(  
@@ -34,10 +45,14 @@ return(
 }
 //                    (props)
 const UpcaseAnimals = ({animal, k}) => {
+  const yoyo = 'yoyo';
   return(
-    //key={props.k}(but this key isn't needed)   {props.animal.toUpperCase()}
-    <p >{animal.toUpperCase()}</p>
+    <>
+      key={props.k}(but this key isn't needed)   {props.animal.toUpperCase()}
+      <p key={k}>{animal.toUpperCase()}</p>
+      {yoyo}
+    </>
   )
 }
-
+*/
 //export default App;
