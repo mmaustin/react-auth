@@ -23,11 +23,19 @@ export const App =() => {
 }
 
 const SortAnimals = () => {
-  const animals = ['dog ', 'cat ', 'gorilla ', 'elephant'];
+  //const animals = ['dog ', 'cat ', 'gorilla ', 'elephant '];
+  const animal = 'rabbit'
+  const changeColor = event => {
+    if(event.target.style.color !== 'red'){
+      event.target.style.color = 'red';
+  } else {
+      event.target.style.color = 'green';
+  }
+  }
 
   return(
     <>
-      {animals}
+      <p onClick={changeColor}>{animal}</p>
     </>
   )
 }
