@@ -25,17 +25,22 @@ export const App =() => {
 const SortAnimals = () => {
   //const animals = ['dog ', 'cat ', 'gorilla ', 'elephant '];
   const animal = 'rabbit'
-  const changeColor = event => {
+
+  /*const changeColor = event => {
     if(event.target.style.color !== 'red'){
       event.target.style.color = 'red';
-  } else {
+    } else {
       event.target.style.color = 'green';
-  }
+    }
+  }*/
+
+  const checkingEvent = e => {
+    e.target.innerText = 'wabbit'
   }
 
   return(
     <>
-      <p onClick={changeColor}>{animal}</p>
+      <p onClick={checkingEvent}>{animal}</p>
     </>
   )
 }
