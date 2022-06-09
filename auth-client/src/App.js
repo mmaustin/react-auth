@@ -9,7 +9,7 @@ export const App =() => {
 
   return (
     <>
-      < SortAnimals/>
+
     {/*<Router>
       <Routes>
         <Route exact path="/" element={< SignupForm />} />
@@ -22,9 +22,9 @@ export const App =() => {
   );
 }
 
-const SortAnimals = () => {
+//const SortAnimals = () => {
   //const animals = ['dog ', 'cat ', 'gorilla ', 'elephant '];
-  const animal = 'rabbit'
+ 
 
   /*const changeColor = event => {
     if(event.target.style.color !== 'red'){
@@ -34,16 +34,18 @@ const SortAnimals = () => {
     }
   }*/
 
+/*
   const checkingEvent = e => {
-    e.target.innerText = 'wabbit'
+    console.log(e.target.innerText += ' bird');
   }
 
   return(
     <>
-      <p onClick={checkingEvent}>{animal}</p>
+      <p onClick={checkingEvent}>{animals}</p>
     </>
   )
 }
+*/
 
 /*
 const PrintInOrder = () => {
@@ -68,4 +70,8 @@ const UpcaseAnimals = ({animal, k}) => {
   )
 }
 */
-//export default App;
+
+//The following captcha code is the work of programmer Justin Sherman. I am reproducing it here, because it is an
+//interesting example to study.
+
+
